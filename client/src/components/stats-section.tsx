@@ -29,11 +29,11 @@ const stats = [
 
 export default function StatsSection() {
   return (
-    <section className="bg-transparent py-8 md:py-12">
+    <section className="bg-gray-50 py-12 md:py-16">
       <div className="max-w-7xl mx-auto px-4">
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-4 text-center">
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
           {stats.map((stat, index) => (
-            <div key={index} className="stats-counter animate-fade-in-up" style={{ animationDelay: `${index * 0.2}s` }}>
+            <div key={index} className="stats-counter bg-white p-6 rounded-lg shadow-sm">
               <div className="text-primary text-2xl md:text-3xl mb-2 flex justify-center">
                 <stat.icon size={36} />
               </div>
