@@ -15,7 +15,7 @@ export default function HeroSection() {
   };
 
   return (
-    <section id="home" className="relative h-screen">
+    <section id="home" className="relative h-96 md:h-[500px]">
       {/* Background Sliding Images */}
       <div className="absolute inset-0">
         <Carousel
@@ -59,24 +59,24 @@ export default function HeroSection() {
       
       {/* Overlay Content */}
       <div className="relative z-10 flex items-center justify-center h-full">
-        <div className="text-center text-white max-w-4xl mx-auto px-6">
-          <h1 className="text-5xl md:text-7xl font-bold mb-6 leading-tight drop-shadow-2xl">
+        <div className="text-center text-white max-w-3xl mx-auto px-4">
+          <h1 className="text-3xl md:text-5xl font-bold mb-4 leading-tight drop-shadow-2xl">
             AB APNE SAPNE PURE KARNA HUA ASSAN
           </h1>
-          <p className="text-2xl md:text-3xl mb-8 drop-shadow-lg">
+          <p className="text-lg md:text-xl mb-6 drop-shadow-lg">
             Ab sapnon ka ghar aayega aur bhi paas
           </p>
-          <div className="flex flex-col sm:flex-row gap-6 justify-center items-center">
+          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
             <Button 
               onClick={scrollToLoans} 
-              className="bg-primary text-white px-12 py-4 text-xl rounded-xl font-bold hover:bg-primary/90 transition-all duration-300 shadow-2xl border-2 border-white/20"
+              className="bg-primary text-white px-8 py-3 text-lg rounded-lg font-bold hover:bg-primary/90 transition-all duration-300 shadow-xl border-2 border-white/20"
               data-testid="button-apply-now"
             >
               APPLY NOW
             </Button>
-            <div className="flex items-center space-x-3 bg-white/10 backdrop-blur-sm px-6 py-3 rounded-xl border border-white/20">
-              <Phone className="text-3xl" />
-              <span className="text-2xl font-bold">+919131703768</span>
+            <div className="flex items-center space-x-2 bg-white/10 backdrop-blur-sm px-4 py-2 rounded-lg border border-white/20">
+              <Phone className="text-xl" />
+              <span className="text-lg font-bold">+919131703768</span>
             </div>
           </div>
         </div>
