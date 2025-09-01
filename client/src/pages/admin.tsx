@@ -60,8 +60,15 @@ export default function Admin() {
 
   const loginMutation = useMutation({
     mutationFn: async (credentials: { username: string; password: string }) => {
-      const response = await apiRequest("POST", "/api/admin/login", credentials);
-      return response.json();
+      // Hardcoded credentials check
+      if (credentials.username === "admin" && credentials.password === "Admin@9131") {
+        return {
+          token: "admin-token-123",
+          user: { id: "1", username: "admin", role: "admin" }
+        };
+      } else {
+        throw new Error("Invalid credentials");
+      }
     },
     onSuccess: (data) => {
       localStorage.setItem("adminToken", data.token);
