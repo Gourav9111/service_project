@@ -1,5 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { Phone } from "lucide-react";
+import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "@/components/ui/carousel";
+import Autoplay from "embla-carousel-autoplay";
 
 export default function HeroSection() {
   const scrollToLoans = () => {
@@ -15,7 +17,7 @@ export default function HeroSection() {
         {/* Text Content at Top */}
         <div className="text-center mb-8">
           <h1 className="text-4xl md:text-6xl font-bold mb-4 animate-fade-in-up">
-            GHAR KA SAPNA HUA AASAN
+            AB APNE SAPNE PURE KARNA HUA ASSAN
           </h1>
           <p className="text-xl md:text-2xl mb-6 animate-fade-in-up animation-delay-200">
             Ab sapnon ka ghar aayega aur bhi paas
@@ -35,15 +37,56 @@ export default function HeroSection() {
           </div>
         </div>
         
-        {/* Image Below Text */}
-        <div className="relative h-80 rounded-lg overflow-hidden">
-          <img 
-            src="https://images.unsplash.com/photo-1609220136736-443140cffec6?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&h=600"
-            alt="Home Loan"
-            className="w-full h-full object-cover"
-          />
-          <div className="absolute inset-0 bg-black bg-opacity-30"></div>
-        </div>
+        {/* Sliding Images Below Text */}
+        <Carousel
+          className="w-full max-w-5xl mx-auto"
+          plugins={[Autoplay({ delay: 3000 })]}
+        >
+          <CarouselContent>
+            <CarouselItem>
+              <div className="relative h-80 rounded-lg overflow-hidden">
+                <img 
+                  src="https://images.unsplash.com/photo-1609220136736-443140cffec6?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&h=600"
+                  alt="Home Loan"
+                  className="w-full h-full object-cover"
+                />
+                <div className="absolute inset-0 bg-black bg-opacity-30"></div>
+              </div>
+            </CarouselItem>
+            <CarouselItem>
+              <div className="relative h-80 rounded-lg overflow-hidden">
+                <img 
+                  src="https://images.unsplash.com/photo-1560518883-ce09059eeffa?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&h=600"
+                  alt="Car Loan"
+                  className="w-full h-full object-cover"
+                />
+                <div className="absolute inset-0 bg-black bg-opacity-30"></div>
+              </div>
+            </CarouselItem>
+            <CarouselItem>
+              <div className="relative h-80 rounded-lg overflow-hidden">
+                <img 
+                  src="https://images.unsplash.com/photo-1497366216548-37526070297c?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&h=600"
+                  alt="Business Loan"
+                  className="w-full h-full object-cover"
+                />
+                <div className="absolute inset-0 bg-black bg-opacity-30"></div>
+              </div>
+            </CarouselItem>
+            <CarouselItem>
+              <div className="relative h-80 rounded-lg overflow-hidden">
+                <img 
+                  src="https://images.unsplash.com/photo-1523050854058-8df90110c9f1?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&h=600"
+                  alt="Education Loan"
+                  className="w-full h-full object-cover"
+                />
+                <div className="absolute inset-0 bg-black bg-opacity-30"></div>
+              </div>
+            </CarouselItem>
+          </CarouselContent>
+          <CarouselPrevious className="left-4" />
+          <CarouselNext className="right-4" />
+        </Carousel>
       </div>
     </section>
   );
