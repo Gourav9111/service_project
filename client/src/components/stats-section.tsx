@@ -10,20 +10,20 @@ const stats = [
   {
     icon: Users,
     value: "50000+",
-    label: "Happy Customers",
-    description: "Satisfied Clients"
+    label: "Loans Approved",
+    description: "Successfully Processed"
   },
   {
     icon: Building,
     value: "500+",
-    label: "Employees",
-    description: "Team Members"
+    label: "Expert Team",
+    description: "Financial Advisors"
   },
   {
     icon: MapPin,
-    value: "100+",
-    label: "Locations across 20 States",
-    description: "& Union Territories"
+    value: "24/7",
+    label: "Customer Support",
+    description: "Always Available"
   }
 ];
 

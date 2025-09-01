@@ -82,12 +82,12 @@ export default function Admin() {
     },
   });
 
-  const { data: loanApplications, isLoading: loadingApplications } = useQuery({
+  const { data: loanApplications = [], isLoading: loadingApplications } = useQuery<LoanApplication[]>({
     queryKey: ["/api/loan-applications"],
     enabled: isAuthenticated,
   });
 
-  const { data: dsaPartners, isLoading: loadingPartners } = useQuery({
+  const { data: dsaPartners = [], isLoading: loadingPartners } = useQuery<DSAPartner[]>({
     queryKey: ["/api/dsa-partners"],
     enabled: isAuthenticated,
   });

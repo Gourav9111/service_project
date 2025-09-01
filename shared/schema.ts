@@ -18,6 +18,7 @@ export const loanApplications = pgTable("loan_applications", {
   mobile: text("mobile").notNull(),
   email: text("email"),
   city: text("city").notNull(),
+  pinCode: text("pin_code"),
   loanType: text("loan_type").notNull(),
   loanAmount: decimal("loan_amount"),
   monthlySalary: decimal("monthly_salary"),

@@ -47,13 +47,23 @@ export default function DSAPartnerSection() {
         </div>
         
         <div className="text-center">
-          <Button 
-            onClick={() => setIsModalOpen(true)} 
-            className="bg-primary text-primary-foreground px-8 py-3 rounded-lg font-semibold hover:bg-red-700 transition-colors"
-            data-testid="button-register-dsa-partner"
-          >
-            Register as DSA Partner
-          </Button>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
+            <Button 
+              onClick={() => setIsModalOpen(true)} 
+              className="bg-primary text-primary-foreground px-8 py-3 rounded-lg font-semibold hover:bg-red-700 transition-colors"
+              data-testid="button-register-dsa-partner"
+            >
+              Register as DSA Partner
+            </Button>
+            <Button 
+              onClick={() => window.location.href = "/dsa-login"} 
+              variant="outline"
+              className="px-8 py-3 rounded-lg font-semibold border-primary text-primary hover:bg-primary hover:text-white transition-colors"
+              data-testid="button-dsa-login"
+            >
+              DSA Login
+            </Button>
+          </div>
         </div>
       </div>
 

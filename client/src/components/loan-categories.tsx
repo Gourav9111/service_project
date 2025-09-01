@@ -137,7 +137,7 @@ export default function LoanCategories() {
     <section id="loans" className="bg-secondary py-16">
       <div className="max-w-7xl mx-auto px-4">
         <div className="text-center mb-12">
-          <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">Our Loan Products</h2>
+          <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">Our Loan Services</h2>
           <p className="text-lg text-muted-foreground">Find the perfect financial solution for your needs</p>
         </div>
 
@@ -146,8 +146,7 @@ export default function LoanCategories() {
           {mainCategories.map((category, index) => (
             <Card 
               key={index} 
-              className="loan-card bg-card shadow-lg hover:shadow-xl cursor-pointer transition-all duration-300 hover:scale-105"
-              onClick={() => handleApplyClick(category.type)}
+              className="loan-card bg-card shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105"
               data-testid={`card-${category.type}`}
             >
               <CardContent className="p-6">
@@ -166,13 +165,23 @@ export default function LoanCategories() {
                   <p className="text-sm text-muted-foreground mb-4" data-testid={`subtitle-${category.type}`}>
                     {category.subtitle}
                   </p>
-                  <div className="text-left text-xs space-y-1">
+                  <div className="text-left text-xs space-y-1 mb-4">
                     {category.benefits.map((benefit, benefitIndex) => (
                       <p key={benefitIndex} data-testid={`benefit-${category.type}-${benefitIndex}`}>
                         • {benefit}
                       </p>
                     ))}
                   </div>
+                  <Button 
+                    onClick={(e) => {
+                      e.stopPropagation();
+                      handleApplyClick(category.type);
+                    }}
+                    className="w-full bg-primary text-white hover:bg-red-700 transition-colors"
+                    data-testid={`button-apply-${category.type}`}
+                  >
+                    Apply Now
+                  </Button>
                 </div>
               </CardContent>
             </Card>
@@ -184,8 +193,7 @@ export default function LoanCategories() {
           {detailedServices.map((service, index) => (
             <Card 
               key={index} 
-              className="loan-card bg-card shadow-lg hover:shadow-xl cursor-pointer transition-all duration-300 hover:scale-105"
-              onClick={() => handleApplyClick(service.type)}
+              className="loan-card bg-card shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105"
               data-testid={`card-${service.type}`}
             >
               <CardContent className="p-6">
@@ -200,13 +208,23 @@ export default function LoanCategories() {
                 <p className="text-primary font-semibold mb-2" data-testid={`rate-${service.type}`}>
                   {service.rate}
                 </p>
-                <div className="text-sm space-y-1">
+                <div className="text-sm space-y-1 mb-4">
                   {service.benefits.map((benefit, benefitIndex) => (
                     <p key={benefitIndex} data-testid={`benefit-${service.type}-${benefitIndex}`}>
                       • {benefit}
                     </p>
                   ))}
                 </div>
+                <Button 
+                  onClick={(e) => {
+                    e.stopPropagation();
+                    handleApplyClick(service.type);
+                  }}
+                  className="w-full bg-primary text-white hover:bg-red-700 transition-colors"
+                  data-testid={`button-apply-${service.type}`}
+                >
+                  Apply Now
+                </Button>
               </CardContent>
             </Card>
           ))}

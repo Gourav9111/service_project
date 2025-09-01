@@ -66,13 +66,6 @@ export default function Navigation() {
             >
               Contact
             </button>
-            <Button 
-              onClick={() => setLocation("/dsa-login")} 
-              className="bg-primary text-primary-foreground hover:bg-red-700 transition-colors"
-              data-testid="button-dsa-login"
-            >
-              DSA Login
-            </Button>
           </div>
 
           {/* Mobile Menu Button */}
@@ -128,18 +121,6 @@ export default function Navigation() {
             >
               Contact
             </button>
-            <div className="px-3 py-2">
-              <Button 
-                onClick={() => {
-                  setLocation("/dsa-login");
-                  setIsMobileMenuOpen(false);
-                }} 
-                className="w-full bg-primary text-primary-foreground hover:bg-red-700 transition-colors"
-                data-testid="mobile-button-dsa-login"
-              >
-                DSA Login
-              </Button>
-            </div>
           </div>
         </div>
       )}

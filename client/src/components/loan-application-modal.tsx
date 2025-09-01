@@ -35,6 +35,7 @@ export default function LoanApplicationModal({ isOpen, onClose, loanType }: Loan
     mobile: "",
     email: "",
     city: "",
+    pinCode: "",
     loanAmount: "",
     monthlySalary: "",
     employmentType: "",
@@ -73,6 +74,7 @@ export default function LoanApplicationModal({ isOpen, onClose, loanType }: Loan
       mobile: "",
       email: "",
       city: "",
+      pinCode: "",
       loanAmount: "",
       monthlySalary: "",
       employmentType: "",
@@ -83,7 +85,7 @@ export default function LoanApplicationModal({ isOpen, onClose, loanType }: Loan
 
   const handleNext = () => {
     if (currentStep === 1) {
-      if (!formData.name || !formData.mobile || !formData.city) {
+      if (!formData.name || !formData.mobile || !formData.city || !formData.pinCode) {
         toast({
           title: "Error",
           description: "Please fill all required fields",
@@ -163,6 +165,17 @@ export default function LoanApplicationModal({ isOpen, onClose, loanType }: Loan
                   placeholder="Enter your city"
                   required
                   data-testid="input-city"
+                />
+              </div>
+              <div>
+                <Label htmlFor="pinCode">Pin Code *</Label>
+                <Input
+                  id="pinCode"
+                  value={formData.pinCode}
+                  onChange={(e) => setFormData({ ...formData, pinCode: e.target.value })}
+                  placeholder="Enter pin code"
+                  required
+                  data-testid="input-pin-code"
                 />
               </div>
             </div>
