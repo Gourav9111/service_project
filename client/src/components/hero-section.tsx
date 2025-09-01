@@ -2,9 +2,6 @@ import { Button } from "@/components/ui/button";
 import { Phone } from "lucide-react";
 import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "@/components/ui/carousel";
 import Autoplay from "embla-carousel-autoplay";
-import homeLoanImage from "@assets/6b58ace4-142a-4304-808a-4bb111feaf5e_1756737167286.png";
-import carLoanImage from "@assets/8d579826-9a79-414e-b44b-01376e0c0a16_1756737167287.png";
-import educationLoanImage from "@assets/a17e6f9b-aaaf-4771-8201-1ded1c3666e9_1756737167287.png";
 
 export default function HeroSection() {
   const scrollToLoans = () => {
@@ -15,7 +12,7 @@ export default function HeroSection() {
   };
 
   return (
-    <section id="home" className="relative h-64 md:h-80">
+    <section id="home" className="relative h-64 md:h-80 mb-8">
       {/* Background Sliding Images */}
       <div className="absolute inset-0">
         <Carousel
@@ -26,8 +23,8 @@ export default function HeroSection() {
             <CarouselItem>
               <div className="relative h-full w-full">
                 <img 
-                  src={homeLoanImage}
-                  alt="Home Loan"
+                  src="https://images.unsplash.com/photo-1560520653-9e0e4c89eb11?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&h=640"
+                  alt="Professional Finance Services"
                   className="w-full h-full object-cover"
                 />
                 <div className="absolute inset-0 bg-black bg-opacity-50"></div>
@@ -36,8 +33,8 @@ export default function HeroSection() {
             <CarouselItem>
               <div className="relative h-full w-full">
                 <img 
-                  src={carLoanImage}
-                  alt="Car Loan"
+                  src="https://images.unsplash.com/photo-1554224155-8d04cb21cd6c?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&h=640"
+                  alt="Business Growth"
                   className="w-full h-full object-cover"
                 />
                 <div className="absolute inset-0 bg-black bg-opacity-50"></div>
@@ -46,8 +43,8 @@ export default function HeroSection() {
             <CarouselItem>
               <div className="relative h-full w-full">
                 <img 
-                  src={educationLoanImage}
-                  alt="Education Loan"
+                  src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&h=640"
+                  alt="Financial Planning"
                   className="w-full h-full object-cover"
                 />
                 <div className="absolute inset-0 bg-black bg-opacity-50"></div>
