@@ -29,7 +29,7 @@ const stats = [
 
 export default function StatsSection() {
   return (
-    <section className="bg-white py-16">
+    <section className="bg-transparent py-0">
       <div className="max-w-7xl mx-auto px-4">
         <div className="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
           {stats.map((stat, index) => (
