@@ -2,6 +2,9 @@ import { Button } from "@/components/ui/button";
 import { Phone } from "lucide-react";
 import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "@/components/ui/carousel";
 import Autoplay from "embla-carousel-autoplay";
+import homeLoanImage from "@assets/6b58ace4-142a-4304-808a-4bb111feaf5e_1756737167286.png";
+import carLoanImage from "@assets/8d579826-9a79-414e-b44b-01376e0c0a16_1756737167287.png";
+import educationLoanImage from "@assets/a17e6f9b-aaaf-4771-8201-1ded1c3666e9_1756737167287.png";
 
 export default function HeroSection() {
   const scrollToLoans = () => {
@@ -23,7 +26,7 @@ export default function HeroSection() {
             <CarouselItem>
               <div className="relative h-full w-full">
                 <img 
-                  src="https://images.unsplash.com/photo-1609220136736-443140cffec6?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&h=1080"
+                  src={homeLoanImage}
                   alt="Home Loan"
                   className="w-full h-full object-cover"
                 />
@@ -33,7 +36,7 @@ export default function HeroSection() {
             <CarouselItem>
               <div className="relative h-full w-full">
                 <img 
-                  src="https://images.unsplash.com/photo-1560518883-ce09059eeffa?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&h=1080"
+                  src={carLoanImage}
                   alt="Car Loan"
                   className="w-full h-full object-cover"
                 />
@@ -43,17 +46,7 @@ export default function HeroSection() {
             <CarouselItem>
               <div className="relative h-full w-full">
                 <img 
-                  src="https://images.unsplash.com/photo-1497366216548-37526070297c?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&h=1080"
-                  alt="Business Loan"
-                  className="w-full h-full object-cover"
-                />
-                <div className="absolute inset-0 bg-black bg-opacity-50"></div>
-              </div>
-            </CarouselItem>
-            <CarouselItem>
-              <div className="relative h-full w-full">
-                <img 
-                  src="https://images.unsplash.com/photo-1523050854058-8df90110c9f1?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&h=1080"
+                  src={educationLoanImage}
                   alt="Education Loan"
                   className="w-full h-full object-cover"
                 />
@@ -67,13 +60,13 @@ export default function HeroSection() {
       {/* Overlay Content */}
       <div className="relative z-10 flex items-center justify-center h-full">
         <div className="text-center text-white max-w-4xl mx-auto px-6">
-          <h1 className="text-5xl md:text-7xl font-bold mb-6 leading-tight animate-fade-in-up drop-shadow-2xl">
+          <h1 className="text-5xl md:text-7xl font-bold mb-6 leading-tight drop-shadow-2xl">
             AB APNE SAPNE PURE KARNA HUA ASSAN
           </h1>
-          <p className="text-2xl md:text-3xl mb-8 animate-fade-in-up animation-delay-200 drop-shadow-lg">
+          <p className="text-2xl md:text-3xl mb-8 drop-shadow-lg">
             Ab sapnon ka ghar aayega aur bhi paas
           </p>
-          <div className="flex flex-col sm:flex-row gap-6 justify-center items-center animate-fade-in-up animation-delay-400">
+          <div className="flex flex-col sm:flex-row gap-6 justify-center items-center">
             <Button 
               onClick={scrollToLoans} 
               className="bg-primary text-white px-12 py-4 text-xl rounded-xl font-bold hover:bg-primary/90 transition-all duration-300 shadow-2xl border-2 border-white/20"
